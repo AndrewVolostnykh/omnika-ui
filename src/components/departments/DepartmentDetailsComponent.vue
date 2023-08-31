@@ -63,11 +63,6 @@ export default {
     },
 
     getDepartment() {
-      if (!this.token) {
-        this.$router.push('/login');
-        return;
-      }
-
       axios({
         method: 'get',
         url: ALL_DEPARTMENTS + '/' + this.depId,

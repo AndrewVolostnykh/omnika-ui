@@ -5,6 +5,7 @@ import MainPage from "@/pages/MainPage";
 import ChannelsPage from "@/pages/ChannelsPage";
 import AgentsPage from "@/pages/AgentsPage";
 import DepartmentsPage from "@/pages/DepartmentsPage";
+import SetPasswordPage from "@/pages/SetPasswordPage"
 import store from './store/store';
 import {USER_ACCESS_TOKEN_GETTER} from "@/store/storeConstants";
 
@@ -14,7 +15,8 @@ const routes = [
   {path: '/', component: MainPage, meta: {auth: true}},
   {path: '/channels', component: ChannelsPage, meta: {auth: true}},
   {path: '/agents', component: AgentsPage, meta: {auth: true}},
-  {path: '/departments', component: DepartmentsPage, meta: {auth: true}}
+  {path: '/departments', component: DepartmentsPage, meta: {auth: true}},
+  {path: '/agent/set-password/:userId', component: SetPasswordPage, meta: {auth: false}}
 ]
 
 const router = createRouter({
